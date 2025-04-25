@@ -41,9 +41,10 @@ for i in range(N):
     
     new_list = x[:i] + x[i+1:]
     M = len(new_list)
-    
-    print(f"Playing as player={i}")
-    print(f"\tnew_list: {new_list}")
+
+    if args.verbose:
+        print(f"Playing as player={i}")
+        print(f"\tnew_list: {new_list}")
     
     # now within this new list we will try to divide into subcases: what if this i^th person
     # were to be placed between (j-1)^th person and j^th person on the list (let's call this xij_alt). 
